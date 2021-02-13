@@ -1,4 +1,4 @@
-import '../core/styles/utils.css'
+import '../core/styles/lite.css'
 //import '../core/styles/animate.css'
 
 function MyApp({ Component, pageProps }) {
