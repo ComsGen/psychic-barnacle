@@ -1,12 +1,12 @@
 {
   "name": "project-china",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is the toolchain china that will enable the use of tailwindcss, reactjs and many other uselful tools and technologies that will help with the developing of the toolbox",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve  ./public/index.html",
-    "build": "parcel build ./public/index.html  --public-url ./",
+    "build": "parcel build ./public/index.html  --public-url ./dist",
     "react": "react-scripts start"
   },
   "repository": {
