@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve  ./public/index.html",
-    "build": "parcel build ./public/index.html  --public-url",
+    "build": "parcel build ./public/index.html  --public-url ./",
     "react": "react-scripts start"
   },
   "repository": {
