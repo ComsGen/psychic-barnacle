@@ -29,10 +29,13 @@
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9.8.6",
+    "components": "^0.1.0",
+    "next": "latest",
     "postcss": "^7.0.35",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
+    "sauveur_core": "0.0.4",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   },
   "devDependencies": {
@@ -41,9 +44,12 @@
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
     "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@parcel/config-default": "latest",
+    "@parcel/transformer-posthtml": "latest",
+    "@parcel/transformer-raw": "latest",
     "parcel": "latest",
     "postcss-cli": "^8.3.1",
-    "@parcel/transformer-posthtml" : "latest"
+    "typescript": "^4.1.5"
   },
   "browserslist": {
     "production": [
