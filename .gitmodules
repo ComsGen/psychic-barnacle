@@ -1,0 +1,9 @@
+[submodule "src/library/core"]
+	path = src/library/core
+	url = https://github.com/sauveurXrawk/stunning-octo-goggles.git
+[submodule "src/library/components"]
+	path = src/library/components
+	url = https://github.com/sauveurXrawk/bookish-octo-memory.git
+[submodule "src/library/api"]
+	path = src/library/api
+	url = https://github.com/sauveurXrawk/miniature-parakeet.git
