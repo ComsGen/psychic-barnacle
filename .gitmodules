@@ -1,11 +1,11 @@
 [submodule "core"]
-	path = library/core
+	path = ./src/library/core
 	url = https://github.com/sauveurXrawk/stunning-octo-goggles.git
 
 [submodule "api"]
-	path = library/api
+	path = ./src/library/api
 	url  = https://github.com/sauveurXrawk/miniature-parakeet.git
 
 [submodule "components"]
-	path = library/components
+	path = ./src/library/components
 	url  = https://github.com/sauveurXrawk/bookish-octo-memory.git
