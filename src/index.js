@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from './app';
+import 'animate.css'
 import * as serviceWorker from './serviceWorker';
 // import "@babel/polyfill";
 
