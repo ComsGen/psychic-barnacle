@@ -8,7 +8,13 @@ export default function Home() {
 
   useEffect(() => {
 
-    setCat(getLocalStorage('categories'))
+    try{
+
+      setCat(getLocalStorage('categories'))
+
+    }catch{
+      console.log('we can not set cat')
+    }
 
     return () => {
 
@@ -23,7 +29,7 @@ export default function Home() {
 
         return (
 
-          <Section section={i} url={`dash/${i}`} />
+          <Section key={i} section={i} url={`dash/${i}`} />
 
         )
       })

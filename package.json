@@ -1,6 +1,7 @@
 {
   "name": "economic",
-  "version": "0.2.0",
+  "version": "0.3.0",
+  "description" : "A mini day to day cash flow understanding",
   "private": true,
   "scripts": {
     "dev": "next dev",

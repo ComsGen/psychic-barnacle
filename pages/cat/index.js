@@ -35,6 +35,8 @@ export default function Home() {
             if (data) {
                 console.log('pushing data')
                 data.data.push(term)
+                
+                setLocalStorage('categories',data)
             } else {
                 data = {}
                 data.data = [term]
@@ -42,6 +44,8 @@ export default function Home() {
                 setLocalStorage('categories',data)
 
             }
+
+            router.push('/')
         } catch {
 
             console.log('unable to add category')

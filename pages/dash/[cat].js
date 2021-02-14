@@ -1,4 +1,4 @@
-import { Head, ModernForm, useEffect, useRouter } from 'components'
+import { Head, Link, useEffect, useRouter } from 'components'
 import { route } from 'next/dist/next-server/server/router';
 
 export default function Dash() {
@@ -6,10 +6,10 @@ export default function Dash() {
 
   const router = useRouter();
 
-    useEffect(() => {
+  useEffect(() => {
 
 
-      console.log(router.query)
+    console.log(router.query)
     return () => {
 
     }
@@ -19,13 +19,21 @@ export default function Dash() {
 
 
   return (
-    <div className="w-full h-screen flex bg-white dark:bg-black">
+    <div className="w-full h-screen flex flex-col bg-white dark:bg-black">
       <Head title={"Econ 101"} />
 
-      <div className="w-full flex h-auto max-w-md  ">
+      <div className="w-full flex h-auto flex-grow max-w-md  ">
 
-     
 
+
+      </div>
+
+      <div className="w-full flex h-auto max-w-md p-4 ">
+
+
+        <Link href="bill/add"><a>
+          add bill
+          </a></Link>
       </div>
     </div>
   )
