@@ -160,10 +160,14 @@ export default function Dash() {
       <div className="w-full flex h-auto  p-4 ">
 
         {isReady ?
-          <Link href={`bill/add?cat=${router.query.cat}`}><a>
+          <Link href={`bill/add?cat=${router.query.cat}`}><a className="mx-2">
             add bill
   </a></Link> : <></>
         }
+
+        <Link href="/">
+          <a className="mx-2">home</a>
+        </Link>
 
       </div>
     </div>
