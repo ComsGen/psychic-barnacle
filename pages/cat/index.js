@@ -34,21 +34,25 @@ export default function Home() {
             console.log(data)
             if (data) {
                 console.log('pushing data')
-                data.data.push(term)
+                let _data = {name:term}
+                _data.id = data.data.length
+                data.data.push(_data)
                 
-                setLocalStorage('categories',data)
+                
             } else {
                 data = {}
-                data.data = [term]
+                let _data = {name:term}
+                _data.id = 0
+                data.data = [_data]
                 
-                setLocalStorage('categories',data)
+                // setLocalStorage('categories',data)
 
             }
-
+            setLocalStorage('categories',data)
             router.push('/')
-        } catch {
+        } catch(e) {
 
-            console.log('unable to add category')
+            console.log('unable to add category',e.message)
         }
 
 

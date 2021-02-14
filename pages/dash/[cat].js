@@ -55,10 +55,15 @@ export default function Dash() {
 
   const initData = () => {
 
+    let id = router.query.id
     let _data = []
 
     let credit = getLocalStorage('credit')
     let debit = getLocalStorage('debit')
+
+    let debtTotal = 0
+    let creditTotal = 0
+    let total = 0
 
     if (credit || debit) {
 
@@ -66,7 +71,10 @@ export default function Dash() {
         credit.data.map((i) => {
           if (i.cat == router.query.cat) {
             _data.push(i)
+            creditTotal += parseInt(i.bill)
           }
+
+          total += parseInt(i.bill)
         })
       } catch {
         console.log('there is no credit')
@@ -76,18 +84,48 @@ export default function Dash() {
         debit.data.map((i) => {
           if (i.cat == router.query.cat) {
             _data.push(i)
+            debtTotal += parseInt(i.bill)
+            
           }
         })
       } catch {
         console.log('there is no debit')
       }
+  
 
+      let debtPercent = (debtTotal/total) * 100
+      let credPercent = (creditTotal/total) * 100
+      // console.log(debtTotal)
+      // console.log(creditTotal)
+      // console.log(total)
 
+      initCategory(id,credPercent,debtPercent)
       setData(_data)
 
 
     }
 
+
+  }
+
+  const initCategory = (id, credit, debt) => {
+
+    try{
+      let _storage = getLocalStorage('categories')
+
+      _storage.data.map((i, k) => {
+        if (i.id == id) {
+          _storage.data[k].debt = debt
+          _storage.data[k].credit = credit
+        }
+  
+      })
+  
+      setLocalStorage('categories', _storage)
+    }catch{
+      console.log('unable to update categories')
+    }
+   
 
   }
 
@@ -125,14 +163,20 @@ export default function Dash() {
 
     return (
 
-      d.map((i) => {
+      d.map((i,k) => {
 
         return (
-          <ListItem key={i.id} name={i.name} amount={i.bill} id={i.id} type={i.type} />
+          <ListItem key={k} name={i.name} amount={i.bill} id={i.id} type={i.type} />
         )
       })
 
     )
+  }
+
+  const renderDelete = () =>{
+    deleteItem(router.query.id, "categories")
+    router.push('/')
+
   }
 
 
@@ -168,6 +212,10 @@ export default function Dash() {
         <Link href="/">
           <a className="mx-2">home</a>
         </Link>
+
+        <div className="cursor-emoji" onClick={() =>renderDelete() } className="mx-2">
+          remove
+        </div>
 
       </div>
     </div>

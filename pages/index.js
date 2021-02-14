@@ -29,7 +29,7 @@ export default function Home() {
 
         return (
 
-          <Section key={i} section={i} url={`dash/${i}`} />
+          <Section key={i.name} section={i.name} url={`dash/${i.name}?id=${i.id}`} />
 
         )
       })
