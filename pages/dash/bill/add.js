@@ -1,15 +1,24 @@
-import { Head, ModernForm, useEffect, EconModels } from 'components'
+import { Head, ModernForm, useEffect, EconModels,useRouter,useState } from 'components'
 
-export default function Home() {
+export default function AddBill() {
 
+
+  const [isReady, setIsReady] = useState(false)
+
+
+  const router = useRouter();
 
   useEffect(() => {
+
+    if(router.query.cat){
+      setIsReady(true)
+    }
 
 
     return () => {
 
     }
-  }, [])
+  }, [router])
 
 
 
@@ -20,12 +29,17 @@ export default function Home() {
 
       <div className="w-full flex h-auto max-w-md  ">
 
-          <ModernForm 
+        {
+          isReady ?   <ModernForm 
           url="/dash/bill"
           mode="create"
           modal={EconModels('bill').data}
           length={EconModels('bill').data.length}
-          />
+          custom={router.query}
+          /> : <></>
+        }
+
+       
 
       </div>
     </div>

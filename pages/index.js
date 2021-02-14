@@ -43,7 +43,7 @@ export default function Home() {
     <div className="w-full h-screen flex lg:justify-center lg:items-center p-2 bg-white dark:bg-black">
       <Head title={"Econ 101"} />
 
-      <div className="w-full flex justify-center h-auto max-w-md  ">
+      <div className="w-full flex lg:justify-center h-auto max-w-md  ">
 
         {
           cat ? <LoadList cats={cat} /> : <></>
