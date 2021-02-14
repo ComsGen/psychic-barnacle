@@ -139,7 +139,7 @@ export default function Dash() {
 
 
   return (
-    <div className="w-full h-screen flex flex-col bg-white dark:bg-black lg:items-center lg:justify-center">
+    <div className="w-full h-full lg:h-screen flex flex-col bg-white dark:bg-black lg:items-center lg:justify-center">
       <Head title={"Econ 101"} />
 
       <div className="w-full flex flex-grow lg:max-w-2xl lg:items-center">
@@ -157,7 +157,7 @@ export default function Dash() {
 
       </div>
 
-      <div className="w-full flex h-auto  p-4 ">
+      <div className="w-full flex h-auto  p-4 sticky inset-x-0 bottom-0 ">
 
         {isReady ?
           <Link href={`bill/add?cat=${router.query.cat}`}><a className="mx-2">
