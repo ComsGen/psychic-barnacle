@@ -40,7 +40,7 @@ export default function Home() {
 
 
   return (
-    <div className="w-full h-screen flex lg:justify-center lg:items-center p-2 bg-white dark:bg-black">
+    <div className="w-full h-full lg:h-screen flex lg:justify-center lg:items-center p-2 bg-white dark:bg-black">
       <Head title={"Econ 101"} />
 
       <div className="w-full flex flex-wrap lg:justify-center h-auto max-w-md  ">
